@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+.scroll-div {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .col#{$i} {
+    width: (100%/12 / $i) - 3%;
+    margin: 1.5%;
+  }
+}
+
+// Nav
+.header {
+  padding: 20px 0%;
+}
+.nav .container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 1.5%;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1.5%;
+
+  justify-content: space-between;
+  align-items: center;
+  &-brand {
+    h1 {
+      a {
+        text-decoration: none;
+        color: black;
+        span {
+          color: darkred;
+        }
+      }
+    }
+  }
+  &-menu {
+    a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+      &:hover {
+        color: goldenrod;
+      }
+    }
+    .profile {
+    }
+  }
+}
+
+.btn {
+  color: wheat;
+  background: darkred;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+.ai-center {
+  align-items: center;
+}
+.img-responsive {
+  width: 100%;
+}
+
+.img-responsive2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero {
+  padding: 5% 0;
+  &-desc {
+    h1 {
+      font-size: 2.5 rem;
+      line-height: 120%;
+      margin-bottom: 20px;
+      span {
+        color: darkgoldenrod;
+      }
+    }
+    p {
+      line-height: 180%;
+    }
+  }
+}
+
+// spacer
+.spacer30 {
+  height: 58px;
+}
+
+// Food
+.food {
+  &-card {
+    box-shadow: 1px 1px 1px #eee;
+    padding: 15px;
+    box-sizing: border-box;
+    .fc-desc {
+      h3 {
+        text-transform: capitalize;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: #777;
+      }
+    }
+    .fc-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      .price-tag {
+        font-size: px;
+      }
+      .price-num {
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .price-tag {
+        color: darkred;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+//footer
+.footer {
+  padding: 5% 0;
+  background-color: black;
+  color: white;
+  &-desc {
+    h3 {
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 100%;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 5px 0;
+      a {
+        color: wheat;
+      }
+    }
+  }
+}
